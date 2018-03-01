@@ -2,18 +2,18 @@ language: java
 sudo: enabled
 dist: trusty
 before_script:
-  - pwd
+  - echo pwd
   - cd
-  - pwd
+  - echo pwd
   - rm -rf ImageMagick*
   - sudo apt-get install build-essential checkinstall && sudo apt-get build-dep imagemagick -y
   - wget http://www.imagemagick.org/download/ImageMagick.tar.gz
   - tar xzvf ImageMagick.tar.gz
-  - pwd
-  - ls
-  - cd "$(ls|grep ImageMagic-)"
-  - pwd
-  - ls
+  - echo pwd
+  - echo ls
+  - cd "$(ls|grep ImageMagick-)"
+  - echo pwd
+  - echo ls
   - ./configure && make
   - checkinstall
   - magick -version

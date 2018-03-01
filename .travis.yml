@@ -2,10 +2,12 @@ language: java
 sudo: enabled
 dist: trusty
 before_script:
-  - echo pwd
+  - pwd
   - cd
-  - echo pwd
+  - pwd
   - sudo apt-get install imagemagick
+  - cd /home/travis/build/hiteshsh/nakal_java
+  - pwd
 #  - rm -rf ImageMagick*
 #  - sudo apt-get install build-essential checkinstall && sudo apt-get build-dep imagemagick -y
 #  - wget http://www.imagemagick.org/download/ImageMagick.tar.gz

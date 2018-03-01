@@ -13,5 +13,5 @@ before_script:
   - magick -version
 
 script:
-  - mvn clean -test
+  - mvn clean test
 

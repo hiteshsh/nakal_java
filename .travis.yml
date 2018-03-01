@@ -15,7 +15,7 @@ before_script:
   - echo pwd
   - echo ls
   - ./configure && make
-  - checkinstall
+  - checkinstall -y
   - magick -version
 
 script:

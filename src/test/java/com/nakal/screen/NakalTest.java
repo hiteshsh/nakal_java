@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -42,13 +43,17 @@ public class NakalTest {
                 System.getProperty("user.dir") + "/testImages/ActivityScreen1.png",
                 System.getProperty("user.dir") + "/testImages/ActivityDifferentImage.png",
                 System.getProperty("user.dir") + "/testImages/MergedImage.png");
+
+        Assert.assertTrue(new File(System.getProperty("user.dir") + "/testImages/MergedImage.png").exists());
     }
 
     @Test
     public void verifyThresholdDifference() throws InterruptedException, IOException, IM4JavaException {
-        imageUtil.compareImages(System.getProperty("user.dir") + "/testImages/googleActual.png",
+        boolean imagePixels=imageUtil.compareImages(System.getProperty("user.dir") + "/testImages/googleActual.png",
                 System.getProperty("user.dir") + "/testImages/googleExpected.png",
                 System.getProperty("user.dir") + "/testImages/percentageDiff.png",2);
+        System.out.println("result :"+imagePixels);
+        Assert.assertTrue(imagePixels);
     }
 
 }

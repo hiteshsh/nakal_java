@@ -16,12 +16,12 @@ public class AndroidTest {
     ImageUtil imageUtil = new ImageUtil();
     NakalExecutor nakalExecutor = new NakalExecutor();
 
-    @Ignore
+    @Test
     public void compareImagesExecutor() throws InterruptedException, IOException, IM4JavaException {
         Assert.assertTrue(nakalExecutor.nakalExecutorNativeCompare("Login",5));
     }
 
-    @Ignore
+    @Test
     public void compareImagesWithPixelDifference()
         throws InterruptedException, IOException, IM4JavaException {
         Assert.assertTrue(nakalExecutor.nakalExecutorNativeCompare("ActivityScreen",3));

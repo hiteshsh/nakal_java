@@ -15,13 +15,13 @@ public class iOSTest {
 
     NakalExecutor nakalExecutor = new NakalExecutor();
 
-    @Ignore
+    @Test
     public void captureScreenShotFromDevice()
         throws InterruptedException, IOException, IM4JavaException {
         nakalExecutor.nakalExecutorNativeCompare("Login");
     }
 
-    @Ignore
+    @Test
     public void compareImagesWithPixelDifference()
             throws InterruptedException, IOException, IM4JavaException {
         Assert.assertTrue(nakalExecutor.nakalExecutorNativeCompare("ActivityScreen",3));

@@ -4,9 +4,14 @@ os:
 sudo: enabled
 dist: trusty
 before_script:
-  - sudo apt-get install alien
-  - sudo alien -i rpmpackage.rpm
-  - rpm -Uvh ImageMagick-7.0.7-24.x86_64.rpm
+  - rm -rf ImageMagick*
+  - sudo apt-get install build-essential checkinstall && sudo apt-get build-dep imagemagick -y
+  - wget http://www.imagemagick.org/download/ImageMagick.tar.gz
+  - tar xzvf ImageMagick.tar.gz
+  - cd "$(ls|grep ImageMagick-)"
+  - pwd
+  - ./configure && make
+  - checkinstall -y
   - convert -version
 
 script:

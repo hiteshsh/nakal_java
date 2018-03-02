@@ -13,6 +13,7 @@ before_script:
   - ./configure && make
   - sudo checkinstall -y
   - sudo ldconfig /usr/local/lib
+  - cd ..
 
 script:
   - mvn clean -Dtest=NakalTest test

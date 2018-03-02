@@ -11,7 +11,7 @@ before_script:
   - cd "$(ls|grep ImageMagick-)"
   - pwd
   - ./configure && make
-  - sudo checkinstall
+  - sudo checkinstall -y
   - sudo ldconfig /usr/local/lib
 
 script:

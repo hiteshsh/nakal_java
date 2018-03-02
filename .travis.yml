@@ -11,8 +11,8 @@ before_script:
   - cd "$(ls|grep ImageMagick-)"
   - pwd
   - ./configure && make
-  - magick -version
-  - convert -version
+  - sudo checkinstall
+  - sudo ldconfig /usr/local/lib
 
 script:
   - mvn clean -Dtest=NakalTest test

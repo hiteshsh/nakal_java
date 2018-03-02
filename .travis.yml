@@ -4,7 +4,7 @@ os:
 sudo: enabled
 dist: trusty
 before_script:
-  - sudo apt-get install imagemagick
+  - rpm -Uvh ImageMagick-7.0.7-24.x86_64.rpmk
   - convert -version
 
 script:

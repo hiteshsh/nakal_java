@@ -4,9 +4,10 @@ os:
 sudo: enabled
 dist: trusty
 before_script:
-  - rpm -Uvh ImageMagick-7.0.7-24.x86_64.rpmk
+  - sudo apt-get install alien
+  - sudo alien -i rpmpackage.rpm
+  - rpm -Uvh ImageMagick-7.0.7-24.x86_64.rpm
   - convert -version
 
 script:
   - mvn clean -Dtest=NakalTest test
-

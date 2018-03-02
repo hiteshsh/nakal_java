@@ -1,8 +1,11 @@
 language: java
+os:
+  - linux
 sudo: enabled
 dist: trusty
 before_script:
   - sudo apt-get install imagemagick
+  - convert -version
 
 script:
   - mvn clean -Dtest=NakalTest test

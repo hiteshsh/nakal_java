@@ -34,6 +34,7 @@ public class NakalTest {
         boolean imagePixels = imageUtil.compareImages(System.getProperty("user.dir") + "/testImages/ActivityScreen.png",
                 System.getProperty("user.dir") + "/testImages/ActivityScreen1.png",
                 System.getProperty("user.dir") + "/testImages/ActivityDifferentImage.png");
+        System.out.println("imagepixels: "+imagePixels);
         Assert.assertFalse(imagePixels);
     }
 

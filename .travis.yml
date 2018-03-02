@@ -3,7 +3,6 @@ sudo: enabled
 dist: trusty
 before_script:
   - sudo apt-get install imagemagick
-  - cd /home/travis/build/hiteshsh/nakal_java
 
 script:
   - mvn clean -Dtest=NakalTest test

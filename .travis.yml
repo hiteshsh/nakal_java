@@ -11,8 +11,7 @@ before_script:
   - cd "$(ls|grep ImageMagick-)"
   - pwd
   - ./configure && make
-  - checkinstall -y
-  - ldconfig /usr/local/lib
+  - magick -version
   - convert -version
 
 script:

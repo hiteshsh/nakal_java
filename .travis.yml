@@ -12,6 +12,7 @@ before_script:
   - pwd
   - ./configure && make
   - checkinstall -y
+  - ldconfig /usr/local/lib
   - convert -version
 
 script:
